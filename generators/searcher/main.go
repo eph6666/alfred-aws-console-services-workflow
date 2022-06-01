@@ -12,6 +12,7 @@ import (
 	"regexp"
 	"strings"
 	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/iancoleman/strcase"
