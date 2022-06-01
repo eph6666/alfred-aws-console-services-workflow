@@ -11,6 +11,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+	"golang.org/x/text/cases"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/iancoleman/strcase"
@@ -62,9 +63,9 @@ func NewSearcherNamer(service, entity string, operationDefinition OperationDefin
 		log.Fatalf("Entity should be singular for casing to work properly")
 	}
 
-	serviceTitle := strings.Title(service)
-	entityTitle := strings.Title(entity)
-	serviceLower := strings.ToLower(service)
+	serviceTitle := cases.Title(service)
+	entityTitle := cases.Title(entity)
+	serviceLower := cases.ToLower(service)
 	name := serviceTitle + entityTitle
 	nameSnakeCase := strcase.ToSnake(name)
 	nameSnakeCase = numberAfterUnderscore.ReplaceAllString(nameSnakeCase, "$1") // strcase will tree numbers as new word; we do not want this for the conventions here
