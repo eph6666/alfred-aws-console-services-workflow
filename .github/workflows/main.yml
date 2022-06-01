@@ -25,7 +25,7 @@ jobs:
             ${{ runner.os }}-go-
       - name: golangci-lint
         run: |
-          go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.41.1
+          go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.46.2
           golangci-lint run
   test:
     name: go test
