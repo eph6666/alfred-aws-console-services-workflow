@@ -967,14 +967,14 @@
       name: Change history
       url: "/elasticbeanstalk/home/changeHistory"
 
-- id: ess
-  name: Elasticsearch Service
-  short_name: ESS
-  description: Run and Scale Elasticsearch Clusters
+- id: oss
+  name: opensearch
+  short_name: OSS
+  description: Run open-source OpenSearch or Elasticsearch using Managed Clusters or Serverless deployments.
   extra_search_terms:
     - elasticsearch
     - opensearch
-  url: "/esv3/home#"
+  url: "/aos/home#"
 
 - id: elastictranscoder
   name: Elastic Transcoder
@@ -2637,3 +2637,27 @@
   name: Status
   description: Get a personalized view of AWS service health
   url: https://status.aws.amazon.com/
+
+- id: bedrock
+  name: bedrock
+  short_name: br
+  description: The easiest way to build and scale generative AI applications with foundation models (FMs).
+  extra_search_terms:
+    - bedrock
+    - br
+  url: "/bedrock/home#"
+
+- id: amazonq
+  name: Q
+  short_name: Q
+  description: Generative AI-powered enterprise assistant
+  extra_search_terms:
+    - amazonq
+  url: "/amazonq/home#"
+
+- id: servicequotas
+  name: Service Quotas
+  description: View and manage your AWS service quotas from a central location
+  extra_search_terms:
+    - quota
+  url: "/servicequotas/home#"
